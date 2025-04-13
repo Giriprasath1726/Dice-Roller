@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #D5E2F0, #C1A3D7);
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/diagonal-noise.png');
+    opacity: 0.05;
+    z-index: 0;
+}
+
+#container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: #2F4A9C;
+}
+
+.subheading {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+    color: #6D7B99;
+}
+
+.controls {
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+input {
+    font-size: 1.8rem;
+    width: 130px;
+    padding: 8px 12px;
+    border: 2px solid #D1B6D1;
+    border-radius: 8px;
+    background: #f3f4f6;
+    color: #3E3F42;
+    text-align: center;
+    font-weight: 500;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #C1A3D7;
+    outline: none;
+}
+
+button {
+    background: #C1A3D7;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background: #B78CC6;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#diceResult {
+    margin: 20px auto;
+    font-size: 1.6rem;
+    color: #2F4A9C;
+    font-weight: 500;
+}
+
+#diceImages {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#diceImages img {
+
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 10px #C1A3D7);
+}
+
+#diceImages img:hover {
+    transform: rotate(15deg) scale(1.1);
+}
